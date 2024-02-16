@@ -8,7 +8,7 @@
 
 nav{
     position: fixed;
-    /* background: #201c52; */
+    background: #201c52;
     left: 0;
     top: 0;
     width: 100%;
@@ -23,6 +23,15 @@ nav{
 
 }
 
+nav img{
+    background: #201c52;
+
+}
+
+nav ul{
+    background: #201c52;
+
+}
 nav ul li{
     list-style: none;
     display: inline-block;
@@ -39,12 +48,19 @@ nav ul li{
     margin-top: 150px;
     color: aliceblue;
     line-height: 40px;
-
+    /* text-wrap: nowrap; */
 }
 
 .table{
     margin-top: 50px;
     width: 100%;
+    overflow: auto;
+}
+
+
+.table::-webkit-scrollbar{
+    /* width: 2px; */
+    /* height: 2px; */
 }
 
 .table th{
@@ -97,6 +113,8 @@ border: none;
 border-radius: 5px;
 align-self: center;
 display: flex;
+flex-direction: row;
+justify-content: center;
 }
 
 .map img{
@@ -325,4 +343,120 @@ font-weight: 400;
     flex-direction: row;
     justify-content: end;
     margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    nav ul{
+        position: absolute;
+        width: 100%;
+        /* background:  ; */
+        color: white;
+        left: 0;
+        top: 100%;
+        text-align: center;
+        background-color: #0c0a2b;
+    }
+
+
+    .table{
+        overflow: auto;
+    }
+
+    .table::-webkit-scrollbar{
+        width: auto;
+        height: 3px;
+        visibility: hidden;
+    }
+
+    .table:hover::-webkit-scrollbar{
+        /* visibility: visible; */
+    }
+
+    .map{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .graph{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* width: 1000px; */
+    }
+     
+    .graph-box1{
+        width: fit-content;
+    }
+    .graph-box2{
+       width: auto;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px;
+    }
+
+    .footer div{
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    nav ul{
+        position: absolute;
+        width: 100%;
+        /* background:  ; */
+        color: white;
+        left: 0;
+        top: 100%;
+        text-align: center;
+        background-color: #0c0a2b;
+    }
+
+
+    .table{
+        overflow: auto;
+    }
+
+    .table::-webkit-scrollbar{
+        width: auto;
+        height: 3px;
+        visibility: hidden;
+    }
+
+    .table:hover::-webkit-scrollbar{
+        /* visibility: visible; */
+    }
+
+    .map{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .graph{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* width: 1000px; */
+    }
+     
+    .graph-box1{
+        width: fit-content;
+    }
+    .graph-box2{
+       width: auto;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px;
+    }
+
+    .footer div{
+        margin-top: 30px;
+    }
 }
